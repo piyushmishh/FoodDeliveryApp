@@ -31,17 +31,16 @@ export default function Card(props) {
     setSize(e.target.value);
   }
   const handleAddToCart = async () => {
-    let food = []
+    let food = null
     for (const item of data) {
       if (item.id === foodItem._id) {
         food = item;
-
         break;
       }
     }
     console.log(food)
     console.log(new Date())
-    if (food !== []) {
+    if (food) {
       if (food.size === size) {
         await dispatch({ type: "UPDATE", id: foodItem._id, price: finalPrice, qty: qty })
         return

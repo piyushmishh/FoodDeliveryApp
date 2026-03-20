@@ -10,6 +10,7 @@ node_modules
 
 # production
 /build
+/dist
 
 .vscode
 /backend/node_modules

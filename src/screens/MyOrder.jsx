@@ -45,10 +45,10 @@ export default function MyOrder() {
             <div className='container'>
                 <div className='row'>
 
-                    {orderData !== {} ? Array(orderData).map(data => {
+                    {Array.isArray(orderData?.orderData?.order_data) ? orderData.orderData.order_data.slice(0).reverse().map((item) => {
                         return (
-                            data.orderData ?
-                                data.orderData.order_data.slice(0).reverse().map((item) => {
+                            item ?
+                                item.map((arrayData) => {
                                     return (
                                         item.map((arrayData) => {
                                             return (
